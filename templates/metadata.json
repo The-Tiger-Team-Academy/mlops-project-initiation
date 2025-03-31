@@ -1,0 +1,38 @@
+{
+  "name": "Project Name",
+  "description": "A brief description of the project",
+  "tags": ["tag1", "tag2"],
+  "authors": [
+    {
+      "name": "Author Name",
+      "email": "author@example.com",
+      "github": "github_username"
+    }
+  ],
+  "created_at": "2024-03-30T00:00:00Z",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/repository"
+  },
+  "documentation": {
+    "website": "https://project-docs.example.com",
+    "api": "https://api-docs.example.com"
+  },
+  "keywords": ["keyword1", "keyword2"],
+  "category": "category_name",
+  "status": "active",
+  "difficulty_level": "intermediate",
+  "estimated_time": "2 hours",
+  "prerequisites": [
+    "Python 3.8+",
+    "Basic ML knowledge"
+  ],
+  "resources": [
+    {
+      "name": "Tutorial",
+      "url": "https://example.com/tutorial"
+    }
+  ]
+} 
