@@ -23,5 +23,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+        working-directory: korat-x-tech-project
 
+      - name: Install Dependencies
+        run: npm ci
+        working-directory: korat-x-tech-project
 
