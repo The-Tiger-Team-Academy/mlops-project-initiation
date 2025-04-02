@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  korat-x-tech-project:
+    image: nitikornchumnankul/korat-x-tech-project:v1.0.${{ github.run_number }}
+    ports:
+      - "3333:80"
+
+
