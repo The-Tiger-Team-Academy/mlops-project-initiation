@@ -1,31 +1,21 @@
-
-name: CI/CD
-
+name: CI/CD Pipeline
+concurrency: korat-x-tech-project
 on:
   push:
-    branches: [ main, master ]
+    branches:
+      - main
   pull_request:
-    branches: [ main, master ]
-
+    branches:
+      - main
 jobs:
-  build:
+  deployment:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x]
-
+    environment: korat-x-tech-project
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-        working-directory: korat-x-tech-project
-
-      - name: Install Dependencies
-        run: npm ci
-        working-directory: korat-x-tech-project
-
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    
+    - name: "check echo"  
+      run: |
+        echo "Hello World"
+  
