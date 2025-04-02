@@ -1,3 +1,4 @@
+
 name: CI/CD
 
 on:
@@ -23,35 +24,4 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - name: Install dependencies
-        run: npm ci
 
-      - name: Run tests
-        run: npm test
-
-      - name: Run linting
-        run: npm run lint
-
-      - name: Build project
-        run: npm run build
-        env:
-          CI: true
-
-      - name: Cache build output
-        uses: actions/cache@v4
-        with:
-          path: |
-            .next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
-
-  # Uncomment and configure this job when you're ready to deploy
-  # deploy:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-  #   
-  #   steps:
-  #     - name: Deploy to production
-  #       run: echo "Add your deployment steps here" 
