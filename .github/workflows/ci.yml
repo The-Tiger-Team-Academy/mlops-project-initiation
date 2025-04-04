@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CD Pipeline
 concurrency: korat-x-tech-project
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
     
     - name: "check echo"  
       run: |
-        echo "Hello World"
+        ls -la
 
     # - name: Build and push Docker image
     #   run: |
